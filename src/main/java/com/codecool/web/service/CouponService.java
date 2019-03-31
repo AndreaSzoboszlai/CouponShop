@@ -13,7 +13,9 @@ public interface CouponService {
 
     Coupon getCoupon(String id) throws SQLException, ServiceException;
 
-    Coupon addCoupon(String name, String percentage) throws SQLException, ServiceException;
+    Coupon addCoupon(String name, String percentage, int id) throws SQLException, ServiceException;
+
+    List<Coupon> getCouponsByUser(int id) throws SQLException;
 
     void addCouponToShops(String couponId, String... shopIds) throws SQLException, ServiceException;
 
